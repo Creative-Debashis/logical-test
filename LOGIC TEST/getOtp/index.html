@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show {
+            display: flex;
+            gap: 10px;
+        }
+
+        .box {
+            height: 40px;
+            width: 40px;
+            border: 1px solid gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Get OTP</h1>
+    <button onclick="getOtp()">Get OTP</button>
+    <div id="show"></div>
+    <h3 id="div"></h3>
+
+
+
+
+    <script>
+        function getOtp(length = 6) {
+            document.getElementById("show").innerHTML = ``;
+            document.getElementById("div").innerHTML = ``;
+            let tempOtp = '';
+            for (let i = 0; i < length; i++) {
+                let otp = Math.floor(Math.random() * 10)
+                tempOtp += otp
+                document.getElementById("show").innerHTML +=
+                    `<div class="box">
+                    <p> ${otp}</p>
+                    </div> `
+            }
+            document.getElementById("div").innerHTML =
+                `<input type="text" id="otpText">
+                    <button id="otpCheck">VERIFY</button>
+                    <h4 id="validate"> </h4> `
+
+            document.getElementById("otpCheck").addEventListener("click", function () {
+                let validate = document.getElementById("validate");
+                let value = document.getElementById("otpText").value;
+                if (value === tempOtp) {
+                    validate.innerText = `OTP is Correct`
+                    validate.style.color = "green"
+                    otpText.value = ``;
+                } else {
+                    validate.innerText = `Incorrect OTP`
+                    validate.style.color = "red"
+                    otpText.value = ``;
+                }
+            })
+        }
+
+    </script>
+
+</body>
+
+</html>
