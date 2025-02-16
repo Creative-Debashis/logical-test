@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* nav bar */
+.nav {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+.nav h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navImg {
+    display: flex;
+    align-items: center;
+}
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+.nav ul li {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav button{
+    height: 36px;
+    width: 135px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(230, 4, 4);
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
