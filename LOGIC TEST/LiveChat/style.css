@@ -166,3 +166,10 @@ main {
     color: black !important;
     font-size: 30px !important;
 }
+/* userInput */
+#userInput {
+    height: 60px;
+    width: 800px;
+    font-size: 28px;
+    text-align: center;
+}
